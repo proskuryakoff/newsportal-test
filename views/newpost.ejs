@@ -1,0 +1,21 @@
+<%- include('partials/header'); -%>
+    <div class="newPost">
+        <h1>Add a New Post:</h1>
+        <form action="/" method="POST" class="newpost-form">
+            <select name="type" required>
+                <option value="Auto">Auto</option>
+                <option value="Sport">Sport</option>
+                <option value="Movies">Movies</option>
+                <option value="Hi-Tech">Hi-Tech</option>
+                <option value="Games">Games</option>
+            </select>
+            <input type="text" name="title" placeholder="Type a title" required>
+            <input type="text" name="image" placeholder="image url" required>
+            <input type="text" name="body" placeholder="type some text" required>
+            <input type="submit">
+        </form>
+        <form action="/" method="GET">
+            <button>Go Back</button>
+        </form>
+    </div>
+<%- include('partials/footer'); -%>

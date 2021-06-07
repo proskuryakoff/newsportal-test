@@ -1,0 +1,136 @@
+<%- include('partials/header'); -%>
+<div class="content-home">
+    <div class="column-1">
+        <div class="category-home">
+            <h3>Auto</h3>
+            <% news.forEach(function(news){ %>
+                <% if(news.type === "Auto"){ %> 
+                    <div class="lpost">
+                        <div class="image-home">
+                            <img src="<%= news.image %>" id="imgHome">
+                        </div>
+                        <div class="text-home">
+                            <% if(news.title.length > 50){ %>
+                                <p><strong><a href="/<%= news._id %>" class="home-post-name"><%= news.title.substring(0,50) %>...</a></strong></p>
+                            <% } else { %>
+                                <p><strong><a href="/<%= news._id %>" class="home-post-name"><%= news.title %></a></strong></p>
+                            <% } %>
+                            <% if(news.body.length > 70){ %>
+                                <p><%= news.body.substring(0,70) %>...</p>
+                            <% } else { %>
+                                <p><%= news.body %></p>
+                            <% } %>
+                            <p class="time"><i><%= news.created %></i></p>
+                        </div>
+                    </div>
+                <% } %>
+            <% })%>
+        </div>
+
+        <div class="category-home">
+            <h3>Sport</h3>
+            <% news.forEach(function(news){ %>
+                <% if(news.type === "Sport"){ %>
+                    <div class="lpost">
+                        <div class="image-home">
+                            <img src="<%= news.image %>" id="imgHome">
+                        </div>
+                        <div class="text-home">
+                            <% if(news.title.length > 50){ %>
+                                <p><strong><a href="/<%= news._id %>" class="home-post-name"><%= news.title.substring(0,50) %>...</a></strong></p>
+                            <% } else { %>
+                                <p><strong><a href="/<%= news._id %>" class="home-post-name"><%= news.title %></a></strong></p>
+                            <% } %>
+                            <% if(news.body.length > 70){ %>
+                                <p><%= news.body.substring(0,70) %>...</p>
+                            <% } else { %>
+                                <p><%= news.body %></p>
+                            <% } %>
+                            <p class="time"><i><%= news.created %></i></p>
+                        </div>
+                    </div>
+                <% } %>
+            <% })%>
+        </div>
+
+        <div class="category-home">
+            <h3>Movies</h3>
+            <% news.forEach(function(news){ %>
+                <% if(news.type === "Movies"){ %>
+                    <div class="lpost">
+                        <div class="image-home">
+                            <img src="<%= news.image %>" id="imgHome">
+                        </div>
+                        <div class="text-home">
+                            <% if(news.title.length > 50){ %>
+                                <p><strong><a href="/<%= news._id %>" class="home-post-name"><%= news.title.substring(0,50) %>...</a></strong></p>
+                            <% } else { %>
+                                <p><strong><a href="/<%= news._id %>" class="home-post-name"><%= news.title %></a></strong></p>
+                            <% } %>
+                            <% if(news.body.length > 70){ %>
+                                <p><%= news.body.substring(0,70) %>...</p>
+                            <% } else { %>
+                                <p><%= news.body %></p>
+                            <% } %>
+                            <p class="time"><i><%= news.created %></i></p>
+                        </div>
+                    </div>
+                <% } %>
+            <% })%>
+        </div>
+</div>
+    <div class="column-2">
+        <div class="category-home">
+            <h3>Hi-Tech</h3>
+            <% news.forEach(function(news){ %>
+                <% if(news.type === "Hi-Tech"){ %>
+                    <div class="lpost">
+                        <div class="image-home">
+                            <img src="<%= news.image %>" id="imgHome">
+                        </div>
+                        <div class="text-home">
+                            <% if(news.title.length > 50){ %>
+                                <p><strong><a href="/<%= news._id %>" class="home-post-name"><%= news.title.substring(0,50) %>...</a></strong></p>
+                            <% } else { %>
+                                <p><strong><a href="/<%= news._id %>" class="home-post-name"><%= news.title %></a></strong></p>
+                            <% } %>
+                            <% if(news.body.length > 70){ %>
+                                <p><%= news.body.substring(0,70) %>...</p>
+                            <% } else { %>
+                                <p><%= news.body %></p>
+                            <% } %>
+                            <p class="time"><i><%= news.created %></i></p>
+                        </div>
+                    </div>
+                <% } %>
+            <% })%>
+        </div>
+
+        <div class="category-home">
+            <h3>Games</h3>
+            <% news.forEach(function(news){ %>
+                <% if(news.type === "Games"){ %>
+                    <div class="lpost">
+                        <div class="image-home">
+                            <img src="<%= news.image %>" id="imgHome">
+                        </div>
+                        <div class="text-home">
+                            <% if(news.title.length > 50){ %>
+                                <p><strong><a href="/<%= news._id %>" class="home-post-name"><%= news.title.substring(0,50) %>...</a></strong></p>
+                            <% } else { %>
+                                <p><strong><a href="/<%= news._id %>" class="home-post-name"><%= news.title %></a></strong></p>
+                            <% } %>
+                            <% if(news.body.length > 70){ %>
+                                <p><%= news.body.substring(0,70) %>...</p>
+                            <% } else { %>
+                                <p><%= news.body %></p>
+                            <% } %>
+                            <p class="time"><i><%= news.created %></i></p>
+                        </div>
+                    </div>
+                <% } %>
+            <% })%>
+        </div>
+    </div>
+</div>
+<%- include('partials/footer'); -%>

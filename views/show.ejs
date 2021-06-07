@@ -1,0 +1,35 @@
+<%- include('partials/header'); -%>
+    <div class="post">
+        <div class="post-head">
+            <p class="post-type"><%= news.type %></p>
+            <h1 class="post-title"><%= news.title %></h1>
+            <p class="time"><i><%= news.created %></i></p>
+            <p><i>Views: <%= news.counter %></i></p>
+        </div>
+        <img src="<%= news.image %>" id="imgPost">
+        <p class="post-text"><%= news.body %></p>
+        <div class="post-comments-field">
+            <div class="post-comments-field-header">
+                <p><strong>Comments:</strong></p>
+            </div>
+            <div class="comments-all">
+            <% news.comments.forEach(function(comments){ %>
+            <div class="single-comment">
+                <p><strong><%= comments.author.name %></strong></p>
+                <p class="time"><i><%= comments.created %></i></p>
+                <p><%= comments.text %></p>
+            </div>
+            <% }); %>
+            </div>
+            <div class="post-comments-field-input">
+                <p>To leave a comment, please <a href="/login" class="login-register-redirect">log in</a>.</p>
+            </div>
+        </div>
+        <form action="/" method="GET">
+            <button class="back-button">Go Back</button>
+        </form>
+        <form action="/<%= news._id %>?_method=delete" method="POST">
+            <button>Delete</button>
+        </form>
+    </div>
+<%- include('partials/footer'); -%>

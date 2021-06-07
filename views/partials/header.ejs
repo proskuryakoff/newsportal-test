@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task#1</title>
+    <link rel="stylesheet" href="/app.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <script src="/jquery-3.6.0.js"></script>
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+    <div class="wrapper">
+    <div class="container">
+        <div class="header">
+            <nav class="nav">
+            <ul class="topmenu">
+                <li><a href="/" id="header-link">Home</a></li>
+                <div class="auth">
+                <% if(!currentUser){ %>
+                <li><a href="/register" id="header-link">Register</a></li>
+                <li><a href="/login" id="header-link">Login</a></li>
+            <% } else { %>
+                <li><a href="#" id="header-link"><%= currentUser.username %></a></li>
+                <li><a href="/logout" id="header-link">Log Out</a></li>
+            <% } %>
+            </div>
+            </ul>
+            </nav>
+            <div class="logo">
+            <a href="/"><img src="/logo.jpg"></a>
+            <form action="/newpost" method="GET">
+                <button>Add New Post</button>
+            </form>
+            </div>
+        </div>
+        <div class="content">

@@ -1,0 +1,13 @@
+<%- include('partials/header'); -%>
+<div class="login-register-form-wrapper">
+<h2>Log In to Your Account:</h2>
+<form action="/login" method="post" class="auth-form">
+    <p class="form-text">Username:</p>
+    <input type="username" name="username" placeholder="Username" required>
+    <p class="form-text">Password:</p>
+    <input type="password" name="password" placeholder="Password" required>
+    <button>Submit</button>
+</form>
+<p>Don't have an account? You can <a href="/register" class="login-register-redirect">register</a> it</p>
+</div>
+<%- include('partials/footer'); -%>

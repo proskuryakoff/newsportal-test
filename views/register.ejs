@@ -1,0 +1,17 @@
+<%- include('partials/header'); -%>
+<div class="login-register-form-wrapper">
+<h2>Register Your Account:</h2>
+<form action="/register" method="post" class="auth-form">
+    <p class="form-text">Username:</p>
+    <input type="text" name="username" placeholder="Username" maxlength="20" required>
+    <p class="form-text">Password:</p>
+    <input type="password" name="password" placeholder="Password" pattern=".{5,30}" title="5 to 30 characters" required>
+    <p class="form-text">Your First Name:</p>
+    <input type="text" name="name" placeholder="Your Name" maxlength="30" required>
+    <p class="form-text">Your Surname:</p>
+    <input type="text" name="surname" placeholder="Your Surname" maxlength="30" required>
+    <button>Submit</button>
+</form>
+<p>Have an account already? Than <a href="/login" class="login-register-redirect">log in</a></p>
+</div>
+<%- include('partials/footer'); -%>
