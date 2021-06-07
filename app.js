@@ -9,7 +9,9 @@ var express = require("express"),
     news = require("./models/news"),
     comments = require("./models/comments");
 
-mongoose.connect("mongodb://localhost:27017/newsportal", { useNewUrlParser: true , useUnifiedTopology: true  });
+// mongoose.connect("mongodb://localhost:27017/newsportal", { useNewUrlParser: true , useUnifiedTopology: true  });
+mongoose.connect("mongodb+srv://misha:TM0DXSWUnkaibIYv@cluster0.nhj63.mongodb.net/newsportal?retryWrites=true&w=majority", { useNewUrlParser: true , useUnifiedTopology: true  });
+
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
